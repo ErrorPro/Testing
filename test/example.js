@@ -1,6 +1,6 @@
 import Example from '../src/example'
 
-describe('ES6 Foo', function () {
+describe('ES6 testing', function () {
   let example;
 
   beforeEach(()=>{
@@ -17,6 +17,7 @@ describe('ES6 Foo', function () {
 
   it('should stub plus fn', ()=>{
     const stub = sinon.stub(example, 'plus')
+
     stub.withArgs(2, 2).returns(44)
     stub.withArgs().throws(new Error('Very bad error'))
 
